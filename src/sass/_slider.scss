@@ -29,7 +29,9 @@
         &:hover {
             color: $red;
         }
-
+        &:link{
+            color:$dark;
+        }
         &--active {
             /*border-bottom: $red solid 5px;*/
             position: relative;
@@ -70,7 +72,7 @@
 
 }
 
-@media only screen and (min-width: 1068px) {
+@media only screen and (min-width: 600px) {
     .slider__item {
 
         flex-grow: 0;

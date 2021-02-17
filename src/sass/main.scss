@@ -247,6 +247,7 @@ body {
 
     &__image {
         width: 90%;
+        max-width: 500px;
         height: 50%;
         margin-left: 6%;
 
@@ -406,16 +407,12 @@ body {
             font-weight: 500;
             align-items: center;
         }
-
         &__item {
-
             cursor: pointer;
             text-transform: uppercase;
             flex-basis: 100px;
-
             &:hover {
                 color: $red;
-
             }
 
             &:last-child {
@@ -477,29 +474,22 @@ body {
     .button--newsletter {
         flex-basis: 100px;
     }
-
     .footer {
         justify-content: space-between;
         flex-direction: row;
     }
-
     .links {
-
         flex-direction: row;
-
     }
-
+    .feature{
+        &__article{
+            padding:3vh 0;
+        }
+    }
     .features {
 
-        width: 100vw;
-        height: 80vh;
-
         &__container {
-
-            flex-basis: 100%;
             height: 80vh;
-            flex-shrink: 0;
-            display: flex;
             flex-direction: row;
             justify-content: space-between;
             gap: 60px;
@@ -507,12 +497,8 @@ body {
 
             &::before {
 
-                height: 60vw;
-                max-height: 250px;
-                left: 0;
                 bottom: 0px;
-                border-bottom-right-radius: 90px;
-                border-bottom-left-radius: 0;
+
             }
 
             & .button {
@@ -523,13 +509,10 @@ body {
 
         &__image {
             flex-basis: 50%;
-
-
         }
 
         &__article {
             flex-basis: 50%;
-
             text-align: left;
         }
 
