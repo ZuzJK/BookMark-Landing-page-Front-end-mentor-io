@@ -1,0 +1,66 @@
+.mobileMenu {
+    padding: 30px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.85);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: 4;
+    color: #fff;
+    text-transform: uppercase;
+
+    &__wrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        width: 100%;
+        flex-basis: 13vh;
+
+        & img {}
+
+
+    }
+
+    &__list {
+
+        margin-bottom: auto;
+        width: 80%;
+        align-items: center;
+        padding: 0;
+        cursor: pointer;
+
+        & li {
+
+            border-top: 1px #ccc solid;
+            padding: 30px;
+            text-align: center;
+
+            &:not(:last-child):hover {
+                color: $red;
+                border-color: $red;
+
+                & + li {
+
+                    border-color: $red;
+                }
+            }
+        }
+
+
+        & .button {
+
+            @include buttonHover(#fff, transparent);
+            text-transform: uppercase;
+
+            &:hover {
+                color: $red;
+                border-color: $red;
+            }
+        }
+    }
+}

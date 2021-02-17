@@ -1,0 +1,64 @@
+
+.button {
+    height: 5vh;
+    color: #fff;
+    font-family: rubik;
+    font-weight: 500;
+    border: 2px transparent solid;
+    border-radius: 10px;
+    cursor: pointer;
+
+
+    &:hover {
+
+        color: $primary;
+        background-color: #fff;
+        border-color: $primary;
+    }
+
+    &--primary {
+        background-color: $primary;
+
+        &:hover {
+
+            @include buttonHover($primary);
+        }
+    }
+
+    &--secondary {
+        width: 9vh;
+        background-color: $secondary;
+        color: $dark;
+
+        &:hover {
+
+            @include buttonHover($secondary);
+        }
+    }
+
+    &--contatc {
+        background-color: $contact;
+
+        &:hover {
+            @include buttonHover($contact);
+
+        }
+
+
+    }
+
+    &--menu {
+
+        width: 60px;
+        border: none;
+        background-color: transparent;
+    }
+
+    &--item {
+        width: 120px;
+    }
+
+    &--newsletter {
+        flex-basis: 500px;
+    }
+}
