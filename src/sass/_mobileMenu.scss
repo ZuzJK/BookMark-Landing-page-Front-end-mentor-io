@@ -54,7 +54,7 @@
 
         & .button {
 
-            @include buttonHover(#fff, transparent);
+            @include ghostButton(#fff, transparent);
             text-transform: uppercase;
 
             &:hover {

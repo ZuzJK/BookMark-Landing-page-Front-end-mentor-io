@@ -21,7 +21,7 @@
 
         &:hover {
 
-            @include buttonHover($primary);
+            @include ghostButton($primary);
         }
     }
 
@@ -32,7 +32,7 @@
 
         &:hover {
 
-            @include buttonHover($secondary);
+            @include ghostButton($secondary);
         }
     }
 
@@ -40,7 +40,7 @@
         background-color: $contact;
 
         &:hover {
-            @include buttonHover($contact);
+            @include ghostButton($contact);
 
         }
 

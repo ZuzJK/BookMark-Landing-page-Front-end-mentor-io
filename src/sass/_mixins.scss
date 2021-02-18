@@ -1,4 +1,4 @@
-@mixin buttonHover($color,$backgroundColor:#fff) {
+@mixin ghostButton($color,$backgroundColor:#fff) {
 
     background-color: $backgroundColor;
     border-color: $color;
