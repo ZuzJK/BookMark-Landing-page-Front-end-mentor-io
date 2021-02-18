@@ -23,23 +23,6 @@
 .menu {
     display: none;
 
-    &--active {
-        & .menu__item {
-            border-top: #ddd solid 1px;
-
-            padding: 40px;
-            text-transform: uppercase;
-
-
-            & .button {
-                @include buttonHover(#fff);
-                background-color: transparent;
-                text-align: center;
-                text-transform: uppercase;
-            }
-        }
-
-    }
 }
 
 body {
