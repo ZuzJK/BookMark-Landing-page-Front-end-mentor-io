@@ -1,11 +1,11 @@
-const itemFAQ = document.querySelectorAll(".list__item");
 const button = document.querySelector("#button--newsletter");
 const input = document.querySelector(".input");
 const buttonMenu = document.querySelector(".button--menu");
 const socialIcons = document.querySelector(".social--links");
 const navBar = document.querySelector(".header__logo");
-const sliderButton = document.querySelectorAll(".slider__item");
 import mobileMenu from "./mobileMenu/mobileMenu.js";
+import sliderBar from "./sliderBar/sliderBar.js";
+import FAQ from "./FAQ/FAQ.js";
 const validation = e => {
     e.preventDefault();
     const label = input.parentElement;
@@ -59,52 +59,9 @@ const validation = e => {
 
 button.addEventListener("click", validation);
 input.addEventListener("change", validation);
-itemFAQ.forEach(item => {
-    item.addEventListener('click', event => {
-
-
-        if (item.nextElementSibling.style.visibility == "visible") {
-            item.style.borderBottom = "1px #ddd solid";
-            item.nextElementSibling.style.borderBottom = "0";
-            item.nextElementSibling.style.visibility = "hidden";
-            item.nextElementSibling.style.height = "0";
-            item.nextElementSibling.style.padding = "0";
-            item.lastElementChild.classList.remove("list__arrow--down");
-        } else {
-            item.style.borderBottom = "none";
-
-            item.nextElementSibling.style.borderBottom = "1px #ddd solid";
-
-            item.nextElementSibling.style.visibility = "visible";
-            item.nextElementSibling.style.height = "auto";
-            item.nextElementSibling.style.padding = "20px";
-            item.lastElementChild.classList.add("list__arrow--down");
-
-        }
 
 
 
-    })
-});
-
-
-sliderButton.forEach(
-
-    item => {
-        item.addEventListener("click", event => {
-            const parent = item.parentElement;
-
-            for (const sliderItem of parent.children) {
-                if (sliderItem.classList.contains("slider__item--active")) {
-
-                    sliderItem.classList.remove("slider__item--active");
-                }
-            }
-            item.classList.add("slider__item--active");
-
-        })
-    }
-);
 
 
 const displayMenu = () => {
@@ -151,6 +108,8 @@ buttonMenu.addEventListener("click", displayMenu);
 const a = new mobileMenu(buttonMenu);
 a.display();
 
+const FAQ2 = FAQ;
+FAQ2();
 
 
 
